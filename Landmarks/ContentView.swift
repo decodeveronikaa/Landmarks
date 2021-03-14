@@ -12,6 +12,11 @@ struct ContentView: View {
         VStack {
             MapView()
                 .frame(height: 300)
+                .ignoresSafeArea(edges: .top)
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
             VStack {
                 Text("Turtle Rock")
                     .font(.title)
@@ -24,8 +29,13 @@ struct ContentView: View {
                         .font(.subheadline)
                     
                 }
+                Divider()
+                Text("About Turtle Rock")
+                    .font(.title2)
+                Text("Turtle Rock is a neighborhood in the south part of Irvine, Orange County, California, near Concordia University, Irvine and the University of California, Irvine. It is bounded to the north by University Drive.")
             }
             .padding()
+            Spacer()
         }
     }
 }
